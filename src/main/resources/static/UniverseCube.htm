@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>宇宙魔方</title>
+  <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  
+  
+      <link rel="stylesheet" href="/static/cube/style.css">
+
+  <link rel="shortcut icon" href="/static/favicon.ico">
+</head>
+
+<body>
+
+
+<div class="ui">
+
+  <div class="ui__background"></div>
+
+  <div class="ui__game"></div>
+
+  <div class="ui__texts">
+    <h1 class="text text--title">
+	  <span>想要进入主站请通关</span>
+      <span>宇宙魔方</span>
+    </h1>
+    <div class="text text--note">
+      双击即可开始
+    </div>
+    <div class="text text--timer">
+      0:00
+    </div>
+    <div class="text text--complete">
+      <span>Complete!</span>
+    </div>
+    <div class="text text--best-time">
+      <icon trophy></icon>
+      <span>Best Time!</span>
+    </div>
+  </div>
+
+  <div class="ui__prefs">
+    <range name="flip" title="翻转特效" list="极速翻转&nbsp;,平滑翻转,活力翻转"></range>
+    <range name="scramble" title="缓冲长度" list="20,25,30"></range>
+    <range name="fov" title="视角调整" list="正常,下移"></range>
+    <range name="theme" title="主题" list="普通,深调,灰调,迷彩,雨"></range>
+  </div>
+
+  <div class="ui__stats">
+    <div class="stats" name="total-solves">
+      <i>通关次数:</i><b>-</b>
+    </div>
+    <div class="stats" name="best-time">
+      <i>全场最佳:</i><b>-</b>
+    </div>
+    <div class="stats" name="worst-time">
+      <i>全场最LOW:</i><b>-</b>
+    </div>
+    <div class="stats" name="average-5">
+      <i>5场平均:</i><b>-</b>
+    </div>
+    <div class="stats" name="average-12">
+      <i>12场平均:</i><b>-</b>
+    </div>
+    <div class="stats" name="average-25">
+      <i>25场平均:</i><b>-</b>
+    </div>
+  </div>
+
+  <div class="ui__buttons">
+    <button class="btn btn--bl btn--stats">
+      <icon trophy></icon>
+    </button>
+    <button class="btn btn--bl btn--prefs">
+      <icon settings></icon>
+    </button>
+    <button class="btn btn--bl btn--back">
+      <icon back></icon>
+    </button>
+    <button class="btn btn--br btn--pwa">
+    </button>
+  </div>
+
+</div>
+
+
+<script src="/static/cube/three.js"></script>
+<script src="/static/cube/index.js"></script>
+
+
+
+
+</body>
+
+</html>
