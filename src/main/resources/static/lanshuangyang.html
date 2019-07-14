@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <title>双阳的JAVA简历</title>
+    <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+    <style>
+        @keyframes roll1 {
+            0% {
+                top: 0%;
+            }
+            80% {
+                top: 50%;
+            }
+            100% {
+                top: 0%;
+            }
+        }
+
+        @keyframes roll2 {
+            0% {
+                top: 20%;
+            }
+            30% {
+                top: 45%;
+            }
+            100% {
+                top: 20%;
+            }
+        }
+
+        .go_down_a1 {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            animation: roll1 1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+
+        .go_down_a2 {
+            top: 20%;
+            left: 0%;
+            position: absolute;
+            animation: roll2 0.6s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+
+        }
+
+        .title-bg {
+            border-radius: 30px;
+            padding: 9px 40px;
+            background-color: transparent
+        }
+
+        .title-bg:hover {
+            background-color: rgba(0, 0, 0, 0.7)
+        }
+
+        .top-nav {
+            display: inline-block;
+        }
+
+        .top-nav a {
+            color: #ffffff
+        }
+
+        .top-nav a:hover, .top-nav a:active, .top-nav a:focus {
+            color: #ffffff !important;
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+
+        .text-white {
+            color: #ffffff
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow: auto;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        / / Safari and Chrome
+        }
+
+        body {
+            -ms-overflow-style: none;
+        / / IE 10 + overflow: -moz-scrollbars-none;
+        / / Firefox
+        }
+
+        canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .top_page {
+            height: 100vh
+        }
+
+        .user_info {
+            color: #fff;
+            background: -webkit-linear-gradient(30deg, #000000, #0f0f0f); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(#000000, #0f0f0f); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(#000000, #0f0f0f); /* Firefox 3.6 - 15 */
+            background: linear-gradient(rgb(47, 47, 47), rgb(103, 103, 103)); /* 标准的语法（必须放在最后） */
+        }
+    </style>
+</head>
+<body>
+<script src="/static/phantoscope/three.min.js"></script>
+<script src="/static/phantoscope/TweenMax.min.js"></script>
+<script src="/static/phantoscope/randomColor.min.js"></script>
+<script src="/static/phantoscope/index.js"></script>
+<div class="top_page container-fluid">
+    <!--    <div class="row">
+            <div class="col-md-3 bg-info">
+                <div class="row text-center">
+                    <img class="img-circle" src="head.jpg" height="100px" width="100px"/>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-4 h4 text-center"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
+                    <div class="col-md-8 h5">兰双阳</div>
+
+                </div>
+
+            </div>
+            <div class="col-md-9 bg-primary"></div>
+        </div>-->
+    <div class="row text-white" style="margin-top: 40px">
+        <div class="col-md-3 text-right">
+            <h2><strong class="title-bg">
+                <small class="label label-default"
+                       style="color:inherit;border-radius: 18px;display: inline-block;vertical-align: top">双阳的
+                </small>
+                个人简历</strong></h2>
+        </div>
+        <div class="col-md-9 text-right">
+            <ul class="nav nav-pills top-nav">
+                <li role="presentation"><a href="#">基本资料</a></li>
+                <li role="presentation"><a href="#">工作经历</a></li>
+                <li role="presentation"><a href="#">专业技能</a></li>
+                <li role="presentation"><a href="#">项目经验</a></li>
+                <li role="presentation"><a href="#">自我评价</a></li>
+                <li role="presentation"><a href="#">联系方式</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row text-white text-center" style="margin-top: 20vh;">
+        <h1><strong>简历 - <span style="font-size: 50%;vertical-align: middle"
+                               class="label label-warning">JAVA</span></strong></h1>
+        <p style="color: #f4f4f4" class="text-muted h3">热爱技术，热爱挑战</p>
+        <p class="text-muted">简历理应骚气十足</p>
+    </div>
+    <div class="row text-center" style="margin-top: 20vh;color: #f4f037">
+        <div style="display: inline-block;width: 30px;height: 60px;line-height: 10px;font-size: 30px;overflow: hidden;position: relative;cursor: pointer">
+            <span class="go_down_a1 glyphicon glyphicon-menu-down"></span>
+            <span class="go_down_a2 glyphicon glyphicon-menu-down"></span>
+        </div>
+    </div>
+</div>
+<div class="container-fluid user_info">
+    <div class="row text-center">
+        <h2 style="color: #f4f037;font-weight: bold;margin: 40px">基本资料</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <div class="info-title text-center">
+                <div style="display: inline-block;font-size: 40px;width: 100px;height: 100px;border-radius: 50%;background-color: #0f0f0f;line-height: 100px;vertical-align: middle"
+                     class="glyphicon glyphicon-knight"></div>
+                <h4>个人信息</h4>
+                <p>姓名：兰双阳 性别：男 年龄：24 籍贯：河南邓州</p>
+            </div>
+        </div>
+        <div class="col-md-2 col-md-offset-1">
+            <div class="info-title text-center">
+                <div style="display: inline-block;font-size: 40px;width: 100px;height: 100px;border-radius: 50%;background-color: #0f0f0f;line-height: 100px;vertical-align: middle"
+                     class="glyphicon glyphicon-object-align-bottom"></div>
+                <h4>教育经历</h4>
+                <p>河南建筑职业技术学院
+                    专科
+                    计算机应用
+                </p>
+            </div>
+        </div>
+        <div class="col-md-2 col-md-offset-1">
+            <div class="info-title text-center">
+                <div style="display: inline-block;font-size: 40px;width: 100px;height: 100px;border-radius: 50%;background-color: #0f0f0f;line-height: 100px;vertical-align: middle"
+                     class="glyphicon glyphicon-blackboard"></div>
+                <h4>职业生涯</h4>
+                <p>JAVA开发工程师 3年</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

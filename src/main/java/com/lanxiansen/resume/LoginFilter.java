@@ -28,8 +28,7 @@ public class LoginFilter implements Filter{
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = ((HttpServletRequest) servletRequest);
         String path = ((HttpServletRequest) servletRequest).getServletPath();
-        System.out.println(path);
-        log.info(CusAccessObjectUtil.getIpAddress(request));
+        log.info("访问IP为"+CusAccessObjectUtil.getIpAddress(request));
         if(path.startsWith("/static")){
             filterChain.doFilter(servletRequest,servletResponse);
         }else{
