@@ -1,5 +1,5 @@
 var conf, scene, camera, cameraCtrl, renderer;
-
+var containerDom = document.querySelector(".top_page");
 var objects, meshes;
 var trucRadius = 5, trucDepth = 0.3, trucHeight = (1 + Math.sin(Math.PI / 6)) * trucRadius;
 var trucGeometry, trucMaterial;
@@ -18,7 +18,7 @@ function init() {
 
   onWindowResize();
   window.addEventListener('resize', onWindowResize, false);
-  document.addEventListener('mousemove', onMouseMove, false);
+  containerDom.addEventListener('mousemove', onMouseMove, false);
 
   animate();
 };
@@ -120,8 +120,8 @@ function onWindowResize() {
 }
 
 function onMouseMove(event) {
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+  mouse.x = (event.clientX / containerDom.clientWidth) * 2 - 1;
+  mouse.y = - ((event.clientY+window.pageYOffset) / containerDom.clientHeight) * 2 + 1;
 
   raycaster.setFromCamera(mouse, camera);
   var intersects = raycaster.intersectObjects(meshes);
