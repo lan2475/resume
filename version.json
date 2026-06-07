@@ -1,7 +1,7 @@
 {
-    "version": 27,
+    "version": 30,
     "entry_package": "sources_by_eprendre",
-    "download_url": "https://github.com/lan2475/resume/releases/download/pro/CustomSources-1.0-SNAPSHOT.jar",
+    "download_url": "https://github.com/lan2475/resume/releases/download/bate/sources_by_eprendre.jar",
     "update_msg": "外置源兼容最新版",
     "support_url": ""
 }
